@@ -2,11 +2,19 @@ from django.shortcuts import render
 
 
 def main(request):
-    return render(request, 'mainapp/index.html')
+    content = {
+        'title': 'SupShop'
+    }
+    return render(request, 'mainapp/index.html', content)
+
+
 
 
 def products(request):
-    return render(request, 'mainapp/products.html')
+    content = {
+        'title': 'SupShop - Категории'
+    }
+    return render(request, 'mainapp/products.html', content)
 
 
 def contact(request):
