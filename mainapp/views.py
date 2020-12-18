@@ -16,17 +16,5 @@ def products(request):
     return render(request, 'mainapp/products.html', content)
 
 
-def contact(request):
-    return render(request, 'mainapp/contact.html')
-
-
-def clothes(request):
-    contex = {
-        'title': 'SupShop - Категории',
-        'products': Product.objects.all()
-    }
-    return render(request, 'mainapp/clothes.html', context=contex)
-
-
 
 # Create your views here.
