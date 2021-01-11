@@ -11,6 +11,7 @@ def main(request):
 def products(request):
     content = {
         'title': 'SupShop - Категории',
+        'categories': ProductCategory.objects.all(),
         'products': Product.objects.all()
     }
     return render(request, 'mainapp/products.html', content)
